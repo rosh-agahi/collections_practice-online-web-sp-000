@@ -20,13 +20,9 @@ def reverse_array(array)
 end
 
 def kesha_maker(array)
-  kesha_array = []
-  array.each do |item|
-    characters = item.split
-    characters[2] = "$"
-    kesha_array << characters.join
-  end
-  kesha_array
+  array.collect do |word|
+    word[2] = "$"
+    word
 end
 
     
